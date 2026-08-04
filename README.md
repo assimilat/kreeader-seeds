@@ -55,7 +55,9 @@ paste field.
 - **GitHub raw (this repo)** — configure a node with:
   `[distributed] seeds_url = "https://raw.githubusercontent.com/assimilat/kreeader-seeds/master/seeds.json"`
 - **DNS TXT** — paste the `dns txt:` base64 that `seedpub sign` prints into a
-  TXT record; configure `[distributed] seeds_dns = "<record name>"`.
+  TXT record; configure `[distributed] seeds_dns = "<record name>"`. The
+  published twin of this repo's `seeds.json` lives at
+  `_kreeader-seeds.jiggl.in` (same signed bytes, standard-base64).
 - **Embedded default** — commit a signed `seeds.json` into the server binary
   at `components/distributed/seeds/defaults/seeds.json`.
 - **Manual** — `[distributed] seed_peers = [...]` (unsigned; the operator is
@@ -89,6 +91,8 @@ the private half stays offline with the publisher.
 
 ## Verify key
 
+The current production verify key (the exact content of `seed_verify.pub`):
+
 ```
-92578a0a1be897b4f803020b10e7b5f06a3a613ee62e1dc154fed2b91c9c19bd
+e55da0139db94fb6467d1bd670a2397697dc9d443c990610c895f84fb02ceb42
 ```
